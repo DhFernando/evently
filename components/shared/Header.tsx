@@ -9,31 +9,28 @@ import MobileNav from "./MobileNav"
 
 function Header() {
   return (
-    <header className="bg-red-100 w-full border-b" >
-        <div className="wrapper flex items-center justify-between">
+    <header className=" w-full border-b" >
+        <div className="wrapper flex items-center">
             <Link href='/' >
                 <Image src="/assets/images/logo.svg" alt="eventlu-logo" width={128} height={38}></Image>
-            </Link>
-            
-            <div className="flex w-32 justify-end gap-3">
-
+            </Link> 
             <SignedIn>
-                <nav className="md:flex-between hidden w-full max-w-xs">
+                <nav className="justify-center flex items-center  w-full max-w-7xl invisible sm:invisible md:visible lg:visible xl:visible" >
                     <NavItems></NavItems>
                 </nav>
             </SignedIn>
-
-            <SignedIn>
-                <UserButton afterSignOutUrl="/" /> 
-                <MobileNav />
-            </SignedIn>
-            <SignedOut>
-                <Button asChild className="rounded-full" size="lg">
-                <Link href="/sign-in">
-                    Login
-                </Link>
-                </Button>
-            </SignedOut>
+            <div className="flex w-32 justify-end gap-3">
+                <SignedIn>
+                    <UserButton afterSignOutUrl="/" /> 
+                    <MobileNav />
+                </SignedIn>
+                <SignedOut>
+                    <Button asChild className="rounded-full" size="lg">
+                        <Link href="/sign-in">
+                            Login
+                        </Link>
+                    </Button>
+                </SignedOut>
             </div>
         </div>
     </header>

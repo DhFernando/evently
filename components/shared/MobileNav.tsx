@@ -28,8 +28,8 @@ export default function MobileNav() {
             width={128}
             height={38}
           />
-          <Separator className="border border-gray-50" />
-          <NavItems />
+          <Separator className="border border-gray-50" /> 
+            <NavItems /> 
         </SheetContent>
       </Sheet>
     </nav>
