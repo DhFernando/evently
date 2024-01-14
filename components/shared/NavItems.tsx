@@ -8,7 +8,7 @@ export default function NavItems() {
     const pathname = usePathname()
 
   return (
-    <ul className='md:flex-between flex space-x-10 flex-col md:flex-row items-start'>
+    <ul className='md:flex-between flex md:space-x-10 flex-col md:flex-row items-start'>
         {headerLinks.map((link, index) =>{
             const isActive = pathname === link.route;
             return (

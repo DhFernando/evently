@@ -10,7 +10,7 @@ import MobileNav from "./MobileNav"
 function Header() {
   return (
     <header className=" w-full border-b" >
-        <div className="wrapper flex items-center">
+        <div className="wrapper flex justify-between items-center">
             <Link href='/' >
                 <Image src="/assets/images/logo.svg" alt="eventlu-logo" width={128} height={38}></Image>
             </Link> 
@@ -19,7 +19,7 @@ function Header() {
                     <NavItems></NavItems>
                 </nav>
             </SignedIn>
-            <div className="flex w-32 justify-end gap-3">
+            <div className="flex w-32  gap-3">
                 <SignedIn>
                     <UserButton afterSignOutUrl="/" /> 
                     <MobileNav />
